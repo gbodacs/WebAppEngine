@@ -5,6 +5,7 @@ using System.Collections.Specialized;
 using System.Net;
 using System.Text;
 using System.Threading;
+using SimpleWebApp.Pages;
 
 public class AsyncServer
 {
@@ -13,9 +14,9 @@ public class AsyncServer
     public AsyncServer()
     {
         mListener = new HttpListener();
-        mListener.Prefixes.Add("http://*:8081/");
-        mListener.Prefixes.Add("http://localhost:8081/");
-        mListener.Prefixes.Add("http://127.0.0.1:8081/");
+        mListener.Prefixes.Add("http://*:8082/");
+        mListener.Prefixes.Add("http://localhost:8082/");
+        mListener.Prefixes.Add("http://127.0.0.1:8082/");
     }
 
     public void StartListen()
@@ -35,20 +36,28 @@ public class AsyncServer
             }
         }
     }
-
-    private string MainResponse()
+    private string AdminResponse()
     {
-        return "<h1>Main page<h1>";
+        SimpleWebApp.Pages.AdminPage page = new AdminPage();
+        return page.Render();
     }
 
-    private string MainResponse_Exit()
+    private string HomeResponse()
     {
-        return "<h1>Main page with exit<h1>";
+        SimpleWebApp.Pages.HomePage page = new HomePage();
+        return page.Render();
     }
 
-    private string AboutResponse()
+    private string LoginResponse()
     {
-        return "<h1>About page<h1>";
+        SimpleWebApp.Pages.LoginPage page = new LoginPage();
+        return page.Render();
+    }
+
+    private string LogoutResponse()
+    {
+        SimpleWebApp.Pages.LogoutPage page = new LogoutPage();
+        return page.Render();
     }
 
     private void HandleRequest(HttpListenerContext context)

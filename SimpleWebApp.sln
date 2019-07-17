@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleWebApp", "SimpleWebApp\SimpleWebApp.csproj", "{79A69F7A-B50B-46A6-BC3A-5D5F1E7FCAF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrigiWebApp", "SimpleWebApp\BrigiWebApp.csproj", "{79A69F7A-B50B-46A6-BC3A-5D5F1E7FCAF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61C523AE-7C1E-44FF-B08F-7AC9640201AC}
 	EndGlobalSection
 EndGlobal
